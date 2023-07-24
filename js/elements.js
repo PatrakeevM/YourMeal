@@ -9,3 +9,4 @@ export const ingredientsColories           = document.querySelector('.ingredient
 export const modalProductPriceCount        = document.querySelector('.modal-product__price-count');
 export const navigationList                = document.querySelector('.nav__list');
 export const navigationListItems           = document.querySelectorAll('.nav__btn');
+export const catalogTitle                  = document.querySelector('.catalog__title');
