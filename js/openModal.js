@@ -7,18 +7,20 @@ import {
     ingredientsColories,
     modalProductPriceCount,
     modalProduct,
+    modalProductBtn,
 } from "./elements.js";
 import { getData } from "./getData.js";
 
 export const openModal = async (id) => {
     const product = await getData(`${API_URL}${PREFIX_PRODUCT}/${id}`);
   
-    modalProductTitle.textContent       = product.title;
-    modalProductImg.src                 = `${API_URL}/${product.image}`;
-    ingredientsList.textContent         = '';
-    ingredientsColories.textContent     = `${product.weight}г, ккал ${product.calories}`;
-    modalProductDescription.textContent = product.description;
-    modalProductPriceCount.textContent  = product.price;
+    modalProductTitle.textContent                = product.title;
+    modalProductImg.src                          = `${API_URL}/${product.image}`;
+    ingredientsList.textContent                  = '';
+    ingredientsColories.textContent              = `${product.weight}г, ккал ${product.calories}`;
+    modalProductDescription.textContent          = product.description;
+    modalProductPriceCount.textContent           = product.price;
+    modalProductBtn.dataset.idProduct            = product.id;
     
     const ingredientsListItems = product.ingredients.map((item) => {
         const li = document.createElement('li');

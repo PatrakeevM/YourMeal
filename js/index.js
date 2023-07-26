@@ -6,21 +6,7 @@ import {
 import { openModal } from './openModal.js';
 import { renderListProduct } from './renderListProduct.js';
 import { navigationListController } from './navigationListController.js';
-
-const Joe = {
-    title: 'Сырный джо',
-    price: 569,
-    weight: 600,
-    calories: 500,
-    description: 'Сырный взрыв, вся палитра сыров в одном бургере',
-    image: 'images/product.jpg',
-    ingredients: [
-        'Пшеничная булочка',
-        'Котлета из рубленой говядины',
-        '4 вида сыров',
-        'Авторский соус'
-    ]
-};
+import { cartInit } from './cart.js';
 
 
 catalogList.addEventListener('click', (event) => {
@@ -43,14 +29,7 @@ modalProduct.addEventListener('click', (event) => {
 const init = () => {
     renderListProduct();
     navigationListController(renderListProduct);
+    cartInit();
 };
 
 init();
-
-
-// const orderSubmit = document.querySelector('.order__submit');
-// const modalDelivery = document.querySelector('.modal__delivery');
-
-// orderSubmit.addEventListener('click', () => {
-//     modalDelivery.classList.add('modal__open');
-// });
