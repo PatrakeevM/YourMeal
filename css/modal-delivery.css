@@ -36,6 +36,10 @@
     gap: var(--gap);
 }
 
+.modal-delivery__fieldset_hide {
+    visibility: hidden;
+}
+
 .modal-delivery__fieldset_radio {
     flex-direction: column;
     align-items: flex-start;
